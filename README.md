@@ -60,4 +60,4 @@ Deploy the function using
  - The Service created in this repo is for image classification using MobileNetV2 network on Imagenet dataset
  - the model and Labels were stored in a GCS Bucket check.
  - To allow unauthenticated invokation : Select the function, Show info panel, Click Add Member, Add the User `allUsers` and grant `Cloud Functions Invoker` and Save
-
+![](https://github.com/bikash-bhoi/serverless-gcp-cloud-function/blob/main/resources/unauth.png)
