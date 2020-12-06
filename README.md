@@ -8,7 +8,7 @@
  - Google cloud console
  
 ## Steps 
-refer this [link](https://www.serverless.com/framework/docs/providers/google/cli-reference/)
+refer this [link](https://www.serverless.com/framework/docs/providers/google/guide/)
 
 ### 1. Create New Service
 Create service in current working directory:
