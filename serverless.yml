@@ -1,0 +1,30 @@
+service: imagenet-gcp
+
+provider:
+  name: google
+  stage: dev
+  runtime: python37
+  region: us-central1
+  project: serverless-101-297314
+  memorySize: 512
+
+  credentials: ~/.gcloud/serverless-101-297314-a41a7f842203.json
+  environment:
+    GCS_BUCKET: sls-dev0099
+    MODEL_PATH: mobilenetV2.pt
+    LABELS_PATH: imagenet_labels.json
+
+frameworkVersion: '2'
+plugins:
+  - serverless-google-cloudfunctions
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+functions:
+  predict:
+    handler: classify_image
+    events:
+      - http: path
